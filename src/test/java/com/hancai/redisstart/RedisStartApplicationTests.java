@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -19,6 +20,12 @@ public class RedisStartApplicationTests {
     protected WebApplicationContext context;
 
     protected MockMvc mvc;
+
+    /*
+     * RedisTemplate 连接池
+     */
+    @Autowired
+    protected RedisTemplate<String, Object> redisTemplate;
 
     @Before
     public void setUp() throws Exception {
