@@ -1,4 +1,4 @@
-package com.hancai.redisstart.redis;
+package com.hancai.redisstart.redis.common;
 
 import com.hancai.redisstart.RedisStartApplicationTests;
 import org.junit.Test;
